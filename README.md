@@ -5,11 +5,14 @@
 A production-ready decentralized application (dApp) built on Stellar Soroban smart contracts. TrustCrow provides a trustless freelance escrow and reputation system where clients can securely lock payments and freelancers are guaranteed payment upon successful job completion.
 
 ## 🚀 Live Demo
-- **Frontend**: [https://trustcrow-dapp.vercel.app](https://trustcrow-dapp.vercel.app) (Simulated Link)
+- **Frontend**: http://localhost:5173/
 - **Network**: Stellar Futurenet
 
 ### 📱 Mobile Responsive View
-![Mobile Responsive View](./frontend/src/assets/mobile-view.png)
+![Mobile Responsive View](<img width="867" height="900" alt="Screenshot 2026-04-29 232117" src="https://github.com/user-attachments/assets/07e52b56-0930-4a03-a805-89ed9e732551" />
+<img width="849" height="737" alt="Screenshot 2026-04-29 232322" src="https://github.com/user-attachments/assets/95d9bc41-aa91-4638-a572-ee5961952cfa" />
+
+)
 
 ## 🏗 Architecture
 The system consists of three modular Soroban smart contracts and a React frontend:
