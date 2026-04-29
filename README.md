@@ -1,7 +1,7 @@
 # TrustCrow - Decentralized Freelance Escrow & Reputation System
 
 [![CI/CD Pipeline](https://github.com/username/freelance-escrow-dapp/actions/workflows/ci.yml/badge.svg)](https://github.com/username/freelance-escrow-dapp/actions)
-<img width="1465" height="702" alt="Screenshot 2026-04-29 232943" src="https://github.com/user-attachments/assets/28972b88-609d-4e1b-88eb-db4eb46e5850" />
+<img width="1457" height="752" alt="Screenshot 2026-04-30 001435" src="https://github.com/user-attachments/assets/05c06d7c-bea2-4db8-a70b-69be50986b9c" />
 
 A production-ready decentralized application (dApp) built on Stellar Soroban smart contracts. TrustCrow provides a trustless freelance escrow and reputation system where clients can securely lock payments and freelancers are guaranteed payment upon successful job completion.
 
