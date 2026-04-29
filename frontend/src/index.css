@@ -1,24 +1,94 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  body {
-    @apply bg-background text-text font-sans antialiased;
-  }
+:root {
+  --color-background: #0B0F19;
+  --color-surface: #1A233A;
+  --color-primary: #3B82F6;
+  --color-secondary: #10B981;
+  --color-accent: #8B5CF6;
+  --color-text: #F8FAFC;
+  --color-textMuted: #94A3B8;
+  --color-border: #2E3B52;
+}
+
+@theme {
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-text: var(--color-text);
+  --color-textMuted: var(--color-textMuted);
+  --color-border: var(--color-border);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer components {
   .glass-card {
-    @apply bg-surface/80 backdrop-blur-md border border-border rounded-2xl shadow-xl;
+    background-color: rgba(26, 35, 58, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   }
+
   .btn-primary {
-    @apply px-6 py-3 bg-primary hover:bg-blue-600 text-white rounded-xl font-medium transition-all shadow-lg hover:shadow-blue-500/25 active:scale-95;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.5);
   }
+
+  .btn-primary:hover {
+    background-color: #2563EB;
+  }
+
+  .btn-primary:active {
+    transform: scale(0.95);
+  }
+
   .btn-secondary {
-    @apply px-6 py-3 bg-surface hover:bg-border text-text rounded-xl font-medium transition-all border border-border;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border-radius: 0.75rem;
+    font-weight: 500;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--color-border);
   }
+
+  .btn-secondary:hover {
+    background-color: var(--color-border);
+  }
+
   .input-field {
-    @apply w-full px-4 py-3 bg-background border border-border rounded-xl focus:outline-none focus:ring-2 focus:ring-primary/50 text-text placeholder-textMuted transition-all;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 0.75rem;
+    color: var(--color-text);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .input-field:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  }
+
+  .input-field::placeholder {
+    color: var(--color-textMuted);
   }
 }
+

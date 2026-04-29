@@ -58,6 +58,23 @@ export default function CreateJob({ walletAddress }) {
           </div>
 
           <div>
+            <label className="block text-sm font-medium text-textMuted mb-1">Arbitrator Address</label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Lock size={18} className="text-textMuted" />
+              </div>
+              <input 
+                type="text" 
+                required
+                placeholder="G..." 
+                className="input-field pl-10"
+                value={formData.arbitratorAddress || ''}
+                onChange={(e) => setFormData({...formData, arbitratorAddress: e.target.value})}
+              />
+            </div>
+          </div>
+
+          <div>
             <label className="block text-sm font-medium text-textMuted mb-1">Amount (TRUST)</label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -79,7 +96,7 @@ export default function CreateJob({ walletAddress }) {
             <label className="block text-sm font-medium text-textMuted mb-1">Job Description</label>
             <textarea 
               required
-              rows="4"
+              rows="3"
               placeholder="Describe the deliverables..." 
               className="input-field"
               value={formData.description}
@@ -87,6 +104,7 @@ export default function CreateJob({ walletAddress }) {
             />
           </div>
         </div>
+
 
         <button 
           type="submit" 

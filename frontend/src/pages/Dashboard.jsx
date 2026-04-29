@@ -6,7 +6,7 @@ export default function Dashboard({ walletAddress }) {
     { title: 'TRUST Balance', value: '1,245.00', icon: <Wallet className="text-primary" />, change: '+12.5%' },
     { title: 'Reputation Score', value: '98', icon: <Star className="text-secondary" />, change: '+2' },
     { title: 'Completed Jobs', value: '14', icon: <Trophy className="text-accent" />, change: '+1' },
-    { title: 'Active Escrows', value: '2', icon: <Activity className="text-orange-400" />, change: '0' },
+    { title: 'Disputes Resolved', value: '3', icon: <Activity className="text-red-400" />, change: '+1' },
   ];
 
   return (
@@ -53,11 +53,12 @@ export default function Dashboard({ walletAddress }) {
           </h3>
           <div className="space-y-4">
             {[
-              { event: 'PaymentReleased', job: '#102', amount: '500 TRUST', time: '2 mins ago', status: 'text-secondary' },
-              { event: 'WorkSubmitted', job: '#104', amount: '-', time: '1 hour ago', status: 'text-accent' },
+              { event: 'DisputeResolved', job: '#106', amount: 'Refunded Client', time: '1 min ago', status: 'text-secondary' },
+              { event: 'PaymentReleased', job: '#102', amount: '500 TRUST', time: '5 mins ago', status: 'text-secondary' },
+              { event: 'JobDisputed', job: '#108', amount: 'Arbitration Req.', time: '1 hour ago', status: 'text-red-400' },
               { event: 'PaymentLocked', job: '#105', amount: '250 TRUST', time: '3 hours ago', status: 'text-primary' },
-              { event: 'ReputationUpdated', job: '-', amount: '+10 Points', time: '1 day ago', status: 'text-secondary' }
             ].map((e, i) => (
+
               <div key={i} className="flex items-center justify-between p-4 bg-background/50 rounded-xl border border-border/50">
                 <div className="flex items-center gap-3">
                   <div className={`w-2 h-2 rounded-full bg-current ${e.status}`}></div>
