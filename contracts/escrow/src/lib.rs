@@ -103,7 +103,8 @@ impl EscrowContract {
         env.events().publish((Symbol::new(&env, "WorkSubmitted"), job_id), job.freelancer);
     }
 
-    pub fn dispute_job(env: Env, job_id: u32) {
+    pub fn dispute_job(env: Env, job_id: u32, caller: Address) {
+        caller.require_auth();
         let mut job: Job = env.storage().persistent().get(&DataKey::Job(job_id)).unwrap();
         
         // Either client or freelancer can dispute if locked or submitted
@@ -111,7 +112,6 @@ impl EscrowContract {
             panic!("cannot dispute at this stage");
         }
         
-        let caller = env.invoker().unwrap(); // Simple auth check for demo
         if caller != job.client && caller != job.freelancer {
             panic!("unauthorized to dispute");
         }
@@ -121,6 +121,7 @@ impl EscrowContract {
         
         env.events().publish((Symbol::new(&env, "JobDisputed"), job_id), caller);
     }
+
 
     pub fn resolve_dispute(env: Env, job_id: u32, to_freelancer: bool) {
         let mut job: Job = env.storage().persistent().get(&DataKey::Job(job_id)).unwrap();
