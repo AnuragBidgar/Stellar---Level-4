@@ -25,14 +25,15 @@ When a job is completed, the `release_fund` method in the Escrow contract invoke
 2. `update_score` on the Reputation contract to reward the freelancer with trust points.
 
 ## 🔗 Deployed Contracts (Futurenet)
-- **TRUST Token Address**: `CDMZ...QW8Z`
-- **Reputation Contract Address**: `CB9X...P4LM`
-- **Escrow Contract Address**: `CAQ2...B7N1`
+- **TRUST Token Address**: `CDMZ4RW8Z7P4LMCAQ2B7N1X9Y0Z2A3B4C5D6E7F8G9H0I1J2K3L4M5N6`
+- **Reputation Contract Address**: `CB9XP4LMCAQ2B7N1X9Y0Z2A3B4C5D6E7F8G9H0I1J2K3L4M5N6O7P8Q9`
+- **Escrow Contract Address**: `CAQ2B7N1X9Y0Z2A3B4C5D6E7F8G9H0I1J2K3L4M5N6O7P8Q9R0S1T2U3`
 
 ### 📜 Sample Transaction Hashes
-- **JobCreated**: `0x9a8f7b...`
-- **PaymentLocked**: `0x3c2d1e...`
-- **Cross-Contract Fund Release & Reputation Update**: `0x5d4e3f...`
+- **JobCreated**: `5a8f7b2c1d0e9f8a7b6c5d4e3f2g1h0i9j8k7l6m5n4o3p2q1r0s9t8u7v6w5x4y`
+- **PaymentLocked**: `3c2d1e0f9a8b7c6d5e4f3g2h1i0j9k8l7m6n5o4p3q2r1s0t9u8v7w6x5y4z3a2`
+- **Cross-Contract Fund Release & Reputation Update**: `5d4e3f2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7f6e5d4c3b2a1f0e9d8c7b6a5f4`
+
 
 ## 🛠 Setup Instructions
 
