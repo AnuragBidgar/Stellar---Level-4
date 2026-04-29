@@ -8,6 +8,9 @@ A production-ready decentralized application (dApp) built on Stellar Soroban sma
 - **Frontend**: [https://trustcrow-dapp.vercel.app](https://trustcrow-dapp.vercel.app) (Simulated Link)
 - **Network**: Stellar Futurenet
 
+### 📱 Mobile Responsive View
+![Mobile Responsive View](./frontend/src/assets/mobile-view.png)
+
 ## 🏗 Architecture
 The system consists of three modular Soroban smart contracts and a React frontend:
 
